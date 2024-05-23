@@ -1,0 +1,11 @@
+.stp-team-wrapper {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stp-member-name {
+    font-size: 20px;
+    margin-top: 10px;
+}
