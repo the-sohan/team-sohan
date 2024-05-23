@@ -28,6 +28,10 @@ function sohan_team_shortcode($atts){
             $term_obj_list2 = get_the_terms( $post_id, 'designation' );
             $designation_names = join(', ', wp_list_pluck($term_obj_list2, 'name'));
 
+            // Retrieve custom meta data
+            $phone = get_post_meta($post_id, '_team_sohan_phone', true);
+            $email = get_post_meta($post_id, '_team_sohan_email', true);
+
             $sohan_team_markup .= '
                 <div class="stp-single-team-content">';
                 if ( has_post_thumbnail($post_id) ) {
@@ -45,6 +49,14 @@ function sohan_team_shortcode($atts){
 
             if ( !empty($department_names) ) {
                 $sohan_team_markup .= '<div class="stp-department"> Department: ' . $department_names . '</div>';
+            }
+
+            if (!empty($phone)) {
+                $sohan_team_markup .= '<div class="stp-phone">Phone: ' . esc_html($phone) . '</div>';
+            }
+
+            if (!empty($email)) {
+                $sohan_team_markup .= '<div class="stp-email"><strong>Email: </strong><a href="mailto:' . esc_attr($email) . '">' . esc_html($email) . '</a></div>';
             }
            
             $sohan_team_markup .= '</div>';

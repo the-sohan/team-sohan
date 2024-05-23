@@ -1,11 +1,17 @@
 .stp-team-wrapper {
     display: flex;
-    gap: 15px;
+    gap: 25px;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+
+.stp-single-team-content {
+    margin: 15px 0;
 }
 
 .stp-member-name {
     font-size: 20px;
     margin-top: 10px;
 }
+

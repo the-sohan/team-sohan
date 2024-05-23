@@ -23,6 +23,9 @@ require_once 'inc/stp-front-scripts.php';
 require_once 'inc/stp-post-type.php';
 require_once 'inc/stp-post-type-taxonomy.php';
 
+// Team Post Meta
+require_once 'inc/stp-post-meta.php';
+
 // Team Shortcode
 require_once 'inc/stp-post-shortcodes.php';
 
