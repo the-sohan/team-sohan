@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Sohan Team Plugin
  * Plugin URI: https://example.com/wp-team-plugin
- * Description: Test Plugin.
+ * Description: This is test plugin.
  * Version: 1.0
  * Author: Sohan
  * Author URI: https://example.com
