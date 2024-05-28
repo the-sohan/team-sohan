@@ -70,7 +70,7 @@ function ssp_team_s_short_notice_after_title($post) {
         // Display the notice
         ?>
         <div class="notice notice-success is-dismissible">
-            <h2><?php printf(__('Use the shortcode: [stpteam id="%d" title="%s"]', 'simple-switch-plugin'), $post_id, esc_html($post_title)); ?></h2>
+            <h2><?php printf(__('Use the shortcode: [sohan_team id="%d" title="%s"]', 'simple-switch-plugin'), $post_id, esc_html($post_title)); ?></h2>
         </div>
         <?php
     }
@@ -93,6 +93,6 @@ function ssp_team_s_short_custom_column($column, $post_id) {
         $post_title = get_the_title($post_id);
 
         // Display the shortcode with post ID and title
-        echo sprintf('[stpteam id="%d" title="%s"]', $post_id, esc_html($post_title));
+        echo sprintf('[sohan_team id="%d" title="%s"]', $post_id, esc_html($post_title));
     }
 }

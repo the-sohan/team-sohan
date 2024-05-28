@@ -6,7 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function sohan_team_shortcode($atts){
     extract(shortcode_atts(array(
-        'count' => -1
+        'count' => -1,
+        'title' => ''
     ), $atts));
 
     $arg = array(
@@ -31,6 +32,8 @@ function sohan_team_shortcode($atts){
             // Retrieve custom meta data
             $phone = get_post_meta($post_id, '_team_sohan_phone', true);
             $email = get_post_meta($post_id, '_team_sohan_email', true);
+
+            
 
             $sohan_team_markup .= '
                 <div class="stp-single-team-content">';
