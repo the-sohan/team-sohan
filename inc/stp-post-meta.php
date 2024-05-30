@@ -89,9 +89,6 @@ function save_team_sohan_meta_data($post_id) {
 
 
 
-
-
-
 // Add meta boxes for team-s-short custom post type(Shortcode Meta)
 // Register the meta box
 add_action('add_meta_boxes', 'team_s_short_meta_box');
