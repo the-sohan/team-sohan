@@ -67,10 +67,23 @@ function ssp_team_s_short_notice_after_title($post) {
         $post_id = $post->ID;
         $post_title = get_the_title($post_id);
 
+        // Retrieve custom meta data
+        $template_number = get_post_meta($post_id, '_team_s_short_radio', true);
+
+        if ( $template_number == 'option1' ) {
+            $temp_no = 1;
+        } elseif ( $template_number == 'option2' ) {
+            $temp_no = 2;
+        } 
+
+
+        
+
+
         // Display the notice
         ?>
         <div class="notice notice-success is-dismissible">
-            <h2><?php printf(__('Use the shortcode: [sohan_team id="%d" title="%s"]', 'simple-switch-plugin'), $post_id, esc_html($post_title)); ?></h2>
+            <h2><?php printf(__('Use the shortcode: [sohan_team id="%d" title="%s" template_no="%d" ]', 'simple-switch-plugin'), $post_id, esc_html($post_title), $temp_no ); ?></h2>
         </div>
         <?php
     }
